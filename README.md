@@ -153,6 +153,7 @@ but Leigh Allen is at least 6' tall.
 - [2010 - Raddum, Håvard, and Marek Sýs. "The zodiac killer ciphers." Tatra Mountains Mathematical Publications 45.1 (2010): 75-91.](http://tatra.mat.savba.sk/Full/45/12ra-sy.pdf)
 - [2011 - Dhavare, Amrapali. Efficient attacks on homophonic substitution ciphers. Diss. San Jose State University, 2011.](http://www.cs.sjsu.edu/faculty/stamp/students/dhavare_amrapali.pdf)
 - [2013 - Berg-Kirkpatrick, Taylor, and Dan Klein. "Decipherment with a Million Random Restarts." EMNLP. 2013.](http://www.cs.berkeley.edu/~tberg/papers/emnlp2013.pdf)
+  - [Wikipedia - Expectation-maximization algorithm](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm)
   - > **We make two arguments supporting the claim that Zodiac 340 is not a homophonic cipher with row-major reading
   order**: the first is statistical, based on the success rate of attempts to crack similar synthetic ciphers; the
   second is qualitative, comparing distributions of local optimum likelihoods.
@@ -362,6 +363,118 @@ but Leigh Allen is at least 6' tall.
 - [2013.10.03 - Try, try again](http://www.zodiackillerciphers.com/?p=504)
 - [2014.12.26 - How to know that you haven't solved the Zodiac-340 cipher](http://www.zodiackillerciphers.com/?p=602)
 - [2015.11.01 - The Zodiac ciphers -- What do we know, and when do we stop trying to solve them?](http://www.zodiackillerciphers.com/?p=629)
+  - [Link to the YouTube video](https://www.youtube.com/watch?v=BV5R3TBMWJg)
+  - 0:00 - 0:30 - Intro of who David is.
+  - 0:35 - 1:12 - David explains what the Zodiac Cipher is and how he got interested in it.
+  - 0:15 - Since I couldn't solve it, I started collecting information on the four ciphers Zodiac sent, to get a very
+  clear understanding of what is already known about them.
+  - 1:27 - The second question I want to explore is, "When can we stop trying to solve them?", and to address that I'm
+  going to talk about a technique I came up with to rule out possibilities of how the 340 may have been enciphered.
+  - 1:40 - Quick background on the Zodiac killer.
+  - 2:30 - David introduces the four ciphertexts.
+  - 3:04 - David discusses the 13-character ciphertext: when it came out, the 408 had already come out and been solved,
+  and the 340 had come out several months previously and had not been solved. The 13 has quite a few repeated symbols.
+  You can come up with a lot of possible names, and there's no way to distinguish a real solution from a fake one.
+  - 3:59 - The 32-symbol "map" cipher has the same issue of many possible solutions. 29 of the 32 symbols only appear
+  once, making it close to being a one-time pad.
+  - 4:30 - Later he sent another letter with a hint, but there are still too many possible solutions.
+  - 5:05 - For the 408, Zodiac split the message into three equal pieces and sent them to different newspapers,
+  demanding that they publish the cryptogram, and the newspapers did so.
+  - 5:17 - In less than a week a high school teacher and his wife decrypted the cryptograms.
+  - 5:30 - The key they came up with breaks down at the end; there's a sequence of 18 symbols that's gibberish.
+  - 5:44 - The cipher is a homophonic substitution cipher. There are multiple symbols to each letter to hide the letter
+  frequencies.
+  - 6:01 - The Hardens (who decoded the message) guessed that the word "kill" would show up in the message, and they
+  were looking for patterns where the word would fit. <He shows an image of the 408 with the most-common bigrams
+  highlighted.> And after guessing what these symbols stand for and replacing them in the entire message, you'll be on
+  your way to recovering the entire message.
+  - 6:35 - Regarding the 18 nonsense characters: in the letter that accompanied the cryptogram, the Zodiac said that the
+  message would contain his identity. And so because the plaintext up until the last 18 characters doesn't reveal his
+  identity, people speculated that his name might be in those last eighteen characters (NW: the plaintext clearly says
+  that the Zodiac has no intention to reveal his identity.) And so people tried looking at anagrams of those characters.
+  - 7:40 - Another explanation for the last eighteen characters is that the Zodiac just wanted to fill out the last
+  section of ciphertext so that when he split it into three sections, it wouldn't give any hints about which section
+  came last. So if you look at the bottom row, it looks like he may be copying letters from the same column but in
+  rows further up. This happens with randomly-shuffled text, but what is especially interesting is that the sequence
+  "QEHM" is perfectly preserved.
+  - 8:25 - Zodiac was known to make numerous spelling errors in his letters, and the Hardens discovered similar
+  misspellings in the plaintext of the cryptogram. What's interesting is that the "correct" symbols tend to resemble the
+  symbols that were mistakenly used instead.
+  - 9:20 - In homophonic substitution ciphers you can look for a pattern of a group of symbols that cycle, and that
+  often indicates that the symbols all stand for the same plaintext letter. We see many patterns like this in the 408.
+  - 10:00 - The 340 seems very similar to the 408. He removed a few symbols and added a bunch of new ones. By adding
+  new symbols and providing a shorter ciphertext the Zodiac made the 340 far harder to solve.
+  - 10:20 - We want to know what direction the message is written in. One way to do that is to look at how many symbols
+  repeat in each row and how many repeat in each column. Because the creator of the ciphertext will tend to change the
+  symbol used to represent a particular letter each time the letter shows up, you'll tend to see that the average
+  duration between multiple occurrences of the same symbol will tend to be higher in the direction that the text is
+  meant to be read. And what you see is that in the 408, there are actually six rows that have no repeating symbols,
+  and in the 340 there are nine rows with no repeating symbols. So that would seem to support the idea that the 340 is
+  meant to be read horizontally.
+  - 11:14 - Dan had an idea: if you look at the 340, the first three lines of the ciphertext and the first three lines
+  after the midpoint both have no repeating symbols. And so he speculated that maybe the ciphertext was originally
+  written out with the top half and bottom half positioned next to each other horizontally, and then the "right half"
+  was moved down below the "left half".
+    - NW: That doesn't make sense to me, because that would seem to eliminate the pattern of no repeated symbols in the
+    row.
+  - 11:44 - Another example of sloppiness: the Zodiac first wrote a forward "K" on the 340, and then scratched it out
+  and replaced it with a backwards "K".
+  - 11:57 - Another way to investigate the reading direction of the message is to look at the repeated bigrams. In the
+  408 there are quite a lot of repeated bigrams, and in the 340 there are not nearly so many, only 25. And if you do a
+  random shuffle, you get on average about 20. If there was a message perfectly preserved in the 340 in the same reading
+  direction as the 408, you'd probably see more repeating bigrams.
+    - NW: What if the Zodiac was purposely trying to avoid repeating bigrams? Didn't the Hardens reveal that they'd used
+    those to crack the first message? (Later: Yep, David makes that point the next minute or two.)
+  - 12:37 - If you draw a line dividing the 340 in half (top and bottom), you'll see that the top half has many more
+  repeating bigrams than the bottom half. So something in the encipherment is disturbing the repeating bigrams.
+  - 12:57 - Now, looking at trigrams: the 408 has a lot of trigrams. The 340 shows two repeating trigrams, which does
+  favor a horizontal repeating direction. So whatever is disturbing the bigram count doesn't seem to be disturbing the
+  trigram count. So maybe what was happening was that the Zodiac was purposely trying to disguise the bigrams, but
+  didn't think to worry about the trigram count.
+  - 13:40 - Another interesting thing about the repeating trigrams is that the IOF repeats directly above the other one,
+  just as the QEHM repeats directly above the previous one. So maybe the 340 has some kind of filler section.
+  - 14:04 - There's another way to count bigrams: you can count bigrams where the two symbols are separated by one or
+  more other symbols. At distance 1 (which we've already discussed), there are 25 repeated bigrams. At distance 19,
+  there are 37 repeated bigrams. And at distance 14, reading right to left, there are forty repeated bigrams. Using
+  random shuffles, the peak number you'd expect is only about 30.
+  - 14:47 - We discussed earlier the ability to look for groups of symbols that cycle, and we can do this with the 340.
+  There are two sets of two symbols in particular that show this pattern. Unfortunately shuffle tests show that it isn't
+  that hard to come up with this behavior by chance. But there are other patterns like this in the ciphertext. "There
+  seems to be a higher distribution of them in the 340 than there are in random ciphertexts."
+  - 15:42 - There are these patterns I call "pivots" where you see the same pattern of symbols appear both horizontally
+  and vertically, and meet at the same point. I did some calculations and saw that if the symbols were assigned
+  randomly, there was a 1 in 50,000 chance that this kind of coincidence of letters would be preserved into the
+  ciphertext. So this makes me wonder if this has something to do with how the ciphertext was put together.
+  - 16:25 - Another pattern I call "the box corners" seem to indicate sections of the code. And two of them appear in
+  the middle of an "O" and a "C" symbol.
+  - 16:54 - People do word searches with the ciphertext. Most of them look meaningless, but the last one very much
+  looks like the Zodiac is signing the ciphertext with his name.
+  - 17:17 - Another interesting thing is happening with the odd and even positions in the ciphertext. I pulled all the
+  odd symbols into one meta-ciphertext and all the even symbols into a different meta-ciphertext, and then counted the
+  number of repeating bigrams, and there's a big discrepancy between them: there are very few repetitions in the odd
+  positions, and very many in the even positions. If you do random trials, less than 1% show this wide of a spread
+  between the odd and even positions.
+  - 18:05 - So, when can we stop trying to solve this thing? 1) Obviously if someone solves it, or 2) if someone comes
+  up with evidence that it was probably a hoax. Until then, let's try to find a solution. The way to do that is to try
+  out different ideas for how it might be enciphered. I hadn't seen a robust way to go through these possibilities and
+  rule them out, and so I thought one way to approach the issue was to generate a big pile of test ciphers that
+  implement any particular hypothesis for how the 340's cipher works, and then try to solve those ciphertexts. If you
+  can break those and not break the 340, then the 340's cipher is probably not the same as the one that created
+  those cracked ciphers.
+  - 18:59 - To start this process I started with the hypothesis that the 340 was created like the 408. I created a
+  ciphertext generator: it goes through a big pile of books, takes random samlpes of length 340, etc. I use an algorithm
+  to come up with a key that comes closest to generating a ciphertext that matches the 340 along several dimensions.
+  - 20:35 - So here are some 340-like ciphers. You can see they have a lot of the same patterns: the weird pivots, the
+  box-corner patterns, the pseudo-words including the Zodiac signatures, they have real underlying plaintext, they have
+  the same bigram count as the real 340.
+  - 21:15 - Why do this? As background: I've seen similar efforts that mimic the symbol distribution but none of the
+  other qualities of the real 340. And the problem with that is that you never know if your code-breaking technique will
+  be able to handle a ciphertext that has those special qualities that the 340 has.
+  - 22:10 - He shows a slide with a few different hypotheses listed.
+  - 22:15 - Possible future work: Knight/Nuhn were able to automatically distinguish between fifty different types of
+  ciphers. I think these results can be improved with ensemble classifiers that correct the weaknesses of other
+  classifiers. I wonder how a classifier would classify the 340 after having been trained on a large test set.
+  - (Switches to questions. TODO: Finish this.)
 - [2016.02.28 - Ciphers that resemble Zodiac's 340-character cryptogram](http://www.zodiackillerciphers.com/?p=637)
 - [2017.09.08 - Hands on Z408](http://www.zodiackillerciphers.com/?p=662)
 - [2017.09.28 - Criminal codes and ciphers](http://www.zodiackillerciphers.com/?p=666)
@@ -526,21 +639,45 @@ but Leigh Allen is at least 6' tall.
 
 ## Individual tools
 
+### Zodiac-specific
+
+- [ZodiacKillerCiphers - Webtoy](http://zodiackillerciphers.com/webtoy/)
+- [ZodiacKillerCiphers - Cipher Explorer](http://zodiackillerciphers.com/cipher-explorer/)
 - [ZodiacRevisited - Zodiac Killer Cipher Generator](http://zodiacrevisited.com/zodiac-killer-cipher-generator/)
   - [2012.06.03 - ZodiacRevisited - Cipher Generator Released](http://zodiacrevisited.com/cipher-generator-released/)
-- [ZodiacKillerCiphers - Zodiac Cipher Font](http://www.zodiackillerciphers.com/?p=726)
-- [ZodiacKillerCiphers - ASCII-to-Symbols table](http://zodiackillerciphers.com/wiki/index.php?title=Comparison_of_cipher_alphabets)
-- [ZodiacKillerCiphers - Cipher Explorer](http://zodiackillerciphers.com/cipher-explorer/)
-- [ZodiacKillerCiphers - Pattern Drawer](http://zodiackillerciphers.com/zodiac-pattern-drawer/)
+  - This lets you generate ciphertext from any input text you provide.
+  - It doesn't give you control over the distribution of symbols to plaintext letters.
+  - It doesn't seem to give you the mapping of symbols to plaintext letters (i.e. the actual cipher).
 - [ZodiacKillerCiphers - CryptoScope](http://zodiackillerciphers.com/webtoy/stats.html)
   - [CryptoScope help](http://zodiackillerciphers.com/wiki/index.php?title=CryptoScope_Help)
   - [2011.09.30 - New CryptoScope features](http://www.oranchak.com/zodiac/webtoy/new_cryptoscope_features.html)
+- [ZodiacKillerCiphers - Pattern Drawer](http://zodiackillerciphers.com/zodiac-pattern-drawer/)
+  - This allows you to see the effect of various transformations to the ciphertext: reading the symbols backwards, reading
+  each column top-down and then L-to-R, reading by columns but zig-zagging up and down, reading in a spiral, and combinations
+  of all those.
 - [ZodiacKillerSite - Peek-a-boo](http://www.zodiackillersite.com/viewtopic.php?f=81&t=3255#p51370)
+  - Authors description: *When I am working on z340 I usually implement transpositioning ideas and statistics. That is fine,
+  but I like "visual" results like the ones in smokie treat's excel sheets. Unfortunately my excel skills are very poor and
+  so I wrote a tool which keeps track of the letters in the inscription and the transcription rectangles. It is possible to
+  select letters and apply a color to them. The main idea is that the relationship between inscription and transcription is
+  always considered when applying new colors. That should help to visualize what happens when experimenting with transcriptions.*
+- [Martin Lindhe - A widget to investigate symbols missing from the middle rows](https://martinlindhe.github.io/zodiac-widget/letter-distribution/index.html)
+
+### Not Zodiac-specific
+
 - [The Free Dictionary](https://www.thefreedictionary.com/words-containing-ll)
   - This has a very useful feature where you can search for words that: 1) start with some string of characters, 2)
   end with some string of characters, or 3) contain some string of characters.
 
 ## Resources
+
+### Zodiac-specific
+
+- [ZodiacKillerCiphers - Zodiac Cipher Font](http://www.zodiackillerciphers.com/?p=726)
+- [ZodiacKillerCiphers - ASCII-to-Symbols table](http://zodiackillerciphers.com/wiki/index.php?title=Comparison_of_cipher_alphabets)
+
+### Not Zodiac-specific
+
 - [University of Notre Dame - Cryptanalysis Hints](https://www3.nd.edu/~busiforc/handouts/cryptography/cryptography%20hints.html)
   - Tips for what procedure to follow:
     - Focus on pairs of repeated letters.
@@ -578,14 +715,51 @@ but Leigh Allen is at least 6' tall.
   - ...but the 340 is clearly *not* sequential in its original orientation.
 - [YYYY - MIT - Edwin Olson - Robust dictinoary attack of short simple subtitution ciphers](https://april.eecs.umich.edu/pdfs/olson2007crypt.pdf)
 
+# Does the 340 contain a message?
+
+## Evidence that the 340 does not contain a message
+
+- From one of Zodiac's letters:
+  - "If you wonder why I was wipeing the cab down I was leaving fake clews for the police to run all over town with,
+  as one might say, I gave the cops som bussy work to do to keep them happy. I enjoy needling the blue pigs."
+
+## Evidence that the 340 does contain a message
+
+- The message contains a crossed out "K", with a backwards "K" written above it, indicating the author had made a mistake.
+  - NW: This could, of course, be the Zodiac leaving "fake clews".
+- The Zodiac seemed to give a hint for his map cipher: "PS. The Mt. Diablo Code concerns Radians + # inches along the
+radians".
+  - If this was a false clue, it would be a level of deception that seems to go beyond anything else the Zodiac is
+  known to have done.
+  - Given the mistakes the Zodiac is known to have made when producing the 408 ciphertext, it seems more likely
+  that the Zodiac simply made another mistake and created a ciphertext that was too short to allow a unique solution to
+  be found.
+  - I (NW) have personally have a friend who loves to give out riddles / puzzles, and a recurring problem I saw
+  with the puzzles he gave me is that there seemed to be no way to verify that a potential solution was the correct one
+  without asking him.
+
+# Is the 340 meant to be read in a different orientation?
+
+## Evidence for a horizontal reading order
+
+- The symbols tend not to repeat within the same row, but there's no such hesitancy to repeat symbols in the columns.
+  - David makes this point at 11:00 in his "What do we know?" talk.
+
+## Evidence for a horizontal-flip orientation
+
+- [ZodiacKillerCiphers - Levenshtein distance analysis](http://zodiackillerciphers.com/wiki/index.php?title=Levenshtein_distance_analysis)
+  - David checked the 408 and 340 for partial symbol matches, like if you had "GHAJ" and "GBAJ", with the idea that
+  the mismatched symbols may refer to the same underlying plaintext letter.
+  - He checked not only the original orientation, but also when rotating the diagram 90 degrees, when flipping it
+  horizontally, and when doing both transformations (with the flip first).
+  - > The count is at maximum the most for the 408 when it is not transformed via rotations and flips. The count is at
+  maximum the most for the 340 when it is flipped horizontally.
+
 # Clues
 
 - We know how the 408 ciphertext was created.
 - The frequency distribution of ciphertext symbols is not flat.
 - There are two symbols which appear twice in a row at least once: '+' and the horizontally-flipped 'P'.
-- From one of this letters:
-  - "If you wonder why I was wipeing the cab down I was leaving fake clews for the police to run all over town with,
-  as one might say, I gave the cops sum bussy work to do to keep them happy. I enjoy needling the lue pigs."
 - We have strong reason to believe that when Zodiac was creating the 340 cipher, he was aware that his previous cipher
 had been broken by guessing that he'd use the word "kill" and "I".
 
@@ -604,10 +778,11 @@ fourth-most-common symbol.
 that represents 'C'. Ditto for the symbol for 'U', which is the 10th-most-common
 symbol.
 
-# How the 408 was solved
+# How the 408 was originally solved
 
 - [10 second clip of an interview with Donald Harden](http://www.zodiackiller.com/donaldharden.mp3   )
   - "we felt that the word 'kill' or 'killing' would appear in his code, and the word 'I', because he had an ego."
+- [Annotated solution to the 408 cipher, based on the Harden worksheets](http://zodiackillerciphers.com/408/key.html)
 
 # Differences between the 340 from the 408
 
@@ -740,8 +915,7 @@ can decode to any of several ciphertext symbols.  Normally each ciphertext symbo
 
 - David Oranchak
   - [2007-2012 - Oranchak.com - Zodiac-related posts](http://www.oranchak.com/?cat=38)
-    - [Here](http://www.oranchak.com/?p=364#comment-1296) he says that he started working on the cipher in March of
-    2007. He released his web toy on April 24, 2007.
+    - [Here](http://www.oranchak.com/?p=364#comment-1296) he says that he started working on the cipher in March of 2007. He released his web toy on April 24, 2007.
   - [2012-Present - ZodiakKillerCophers](http://www.zodiackillerciphers.com/)
   - [Amazon.com - David Oranchak - The Big Book of Shinro Puzzles](https://www.amazon.com/Big-Book-Shinro-Puzzles/dp/145366050X/ref=sr_1_1?s=books&ie=UTF8&qid=1516041163&sr=1-1&refinements=p_27%3ADavid+Oranchak)
     - Mentioned in his 2017.10.19 talk.

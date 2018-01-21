@@ -8,9 +8,8 @@ There are two tricky things such a solution needs to do:
      way that the highest-scored possible assignment is the *real* assignment.
 
 """
-from utls import get_ciphertext
+from utils import get_ciphertext
 
-alphabet = "abddefghijklmnopqrstuvwxyz"
 
 
 def decode_with_simple_brute_force(path_to_file_with_ciphertext):
