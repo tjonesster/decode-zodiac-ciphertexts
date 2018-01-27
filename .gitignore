@@ -104,3 +104,4 @@ ENV/
 decode-zodiac-340-ciphertext.pdf
 encoded_ciphertexts/340-cipher-hi-resolution.jpg
 tex2pdf.*/
+settings.ini

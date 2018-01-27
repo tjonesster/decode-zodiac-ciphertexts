@@ -1,5 +1,6 @@
 
-alphabet = "abddefghijklmnopqrstuvwxyz"
+alphabet_lowercase = "abcdefghijklmnopqrstuvwxyz"
+alphabet_capitalized = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 start_of_syllable_consonant_blends = ["bl", "br", "ch", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "kn", "kw",
                                       "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw",
@@ -35,6 +36,13 @@ z340 = ["HER>pl^VPk|1LTG2d",
         "|FkdW<7tB_YOB*-Cc",
         ">MDHNpkSzZO8A|K;+"]
 
+z340_symbols = set(list("".join(z340)))
+
+z340_first_quadrant = [row[:10] for row in z340[:11]]
+z340_second_quadrant = [row[8:] for row in z340[:11]]
+z340_third_quadrant = [row[:10] for row in z340[11:]]
+z340_fourth_quadrant = [row[8:] for row in z340[11:]]
+
 z408 = ["9%P/Z/UB%kOR=pX=B",
         "WV+eGYF69HP@K!qYe",
         "MJY^UIk7qTtNQYD5)",
@@ -60,6 +68,7 @@ z408 = ["9%P/Z/UB%kOR=pX=B",
         "Z@JTtq_8JI+rBPQW6",
         "VEXr9WI6qEHM)=UIk"]
 
+z408_symbols = set(list("".join(z408)))
 
 def get_ciphertext(path_to_file_with_ciphertext):
     """ Returns a list of lists

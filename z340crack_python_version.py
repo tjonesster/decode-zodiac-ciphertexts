@@ -39,7 +39,6 @@ _ = Caret
 X = Plus sign
 ] = Dot
 
-
 Ciphertext block:    YB91TMKO
                      T2M]X3BF
                      4FB5678R
